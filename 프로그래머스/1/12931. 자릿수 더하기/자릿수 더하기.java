@@ -10,8 +10,6 @@ public class Solution {
             answer += Character.getNumericValue(ns.charAt(i));
         }
         
-        
-        
         return answer;
     }
 }
