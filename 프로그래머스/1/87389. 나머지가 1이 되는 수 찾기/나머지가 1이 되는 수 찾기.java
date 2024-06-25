@@ -8,7 +8,7 @@ class Solution {
                 break;
             }
         }
-        
+        System.out.println(answer);
         return answer;
     }
 }
