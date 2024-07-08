@@ -1,10 +1,12 @@
 class Solution {
     public String solution(String phone_number) {
-        String last = phone_number.substring(phone_number.length() - 4);
+        int size = phone_number.length() - 4;
+        
+        String last = phone_number.substring(size);
         
         StringBuilder sb = new StringBuilder();
         
-        for(int i = 0; i < phone_number.length() - 4; i++) {
+        for(int i = 0; i < size; i++) {
             sb.append("*");
         }
         
