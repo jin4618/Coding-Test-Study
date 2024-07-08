@@ -13,6 +13,7 @@ class Solution {
         if(list.size() == 0) {
             answer = new int[1];
             answer[0] = -1;
+            return answer;
         } else {
             Collections.sort(list);
             answer = new int[list.size()];
