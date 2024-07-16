@@ -3,6 +3,8 @@ class Solution {
         String answer = "";
         int half = s.length() / 2;
         
+        // System.out.println(half);
+        
         if(s.length() % 2 == 0) {
             answer = s.substring(half - 1, half + 1);
         }
