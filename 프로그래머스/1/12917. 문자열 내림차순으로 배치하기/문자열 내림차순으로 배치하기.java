@@ -4,8 +4,8 @@ class Solution {
         String answer = "";
         char[] chArr = s.toCharArray();
         
-        for(int i = 0; i < s.length() - 1; i++) {
-            for (int j = 0; j < s.length() - 1 - i; j++) {
+        for(int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < s.length() - 1; j++) {
                 if((int) chArr[j] < (int) chArr[j + 1]) {
                     char temp = chArr[j];
                     chArr[j] = chArr[j + 1];
