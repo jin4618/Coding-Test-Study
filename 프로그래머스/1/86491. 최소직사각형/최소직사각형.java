@@ -1,6 +1,5 @@
 class Solution {
     public int solution(int[][] sizes) {
-        int answer = 0;
         int maxWidth = 0;
         int maxHeight = 0;
         
@@ -12,8 +11,6 @@ class Solution {
             maxHeight = Math.max(maxHeight, height);
         }
         
-        answer = maxWidth * maxHeight;
-        
-        return answer;
+        return maxWidth * maxHeight;
     }
 }
