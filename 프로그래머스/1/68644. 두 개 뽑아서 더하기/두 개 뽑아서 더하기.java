@@ -17,6 +17,8 @@ class Solution {
             answer[index++] = num.intValue();
         }
         
+        // int[] answer = result.stream().mapToInt(Integer::intValue).toArray();
+        
         Arrays.sort(answer);
         
         return answer;
