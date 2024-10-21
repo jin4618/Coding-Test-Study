@@ -8,7 +8,6 @@ class Solution {
         
         int[] scores = new int[3];
         
-        // 각 학생의 정답 수 계산
         for (int i = 0; i < answers.length; i++) {
             if (answers[i] == student1[i % student1.length]) { 
                 scores[0]++;
@@ -20,11 +19,9 @@ class Solution {
                 scores[2]++;
             }
         }
-        
-        // 최고 점수 찾기
+
         int maxScore = Math.max(scores[0], Math.max(scores[1], scores[2]));
-        
-        // 최고 점수를 받은 학생 찾기
+
         List<Integer> winners = new ArrayList<>();
         
         for (int i = 0; i < 3; i++) {
@@ -32,8 +29,7 @@ class Solution {
                 winners.add(i + 1);
             }
         }
-        
-        // 결과를 배열로 변환
+
         return winners.stream().mapToInt(i -> i).toArray();
     }
 }
