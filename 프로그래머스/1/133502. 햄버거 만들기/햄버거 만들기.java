@@ -3,19 +3,19 @@ class Solution {
         // 1: 빵, 2: 야채, 3: 고기 => 1231
         int answer = 0;
         
-        StringBuilder stack = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         
         for(int i : ingredient) {
-            stack.append(i);
+            sb.append(i);
         
-            if(stack.length() >= 4) {
-                int len = stack.length();
-                if(stack.charAt(len - 4) == '1' &&
-                    stack.charAt(len - 3) == '2' &&
-                    stack.charAt(len - 2) == '3' &&
-                    stack.charAt(len - 1) == '1') {
+            if(sb.length() >= 4) {
+                int len = sb.length();
+                if(sb.charAt(len - 4) == '1' &&
+                    sb.charAt(len - 3) == '2' &&
+                    sb.charAt(len - 2) == '3' &&
+                    sb.charAt(len - 1) == '1') {
 
-                    stack.setLength(len - 4);
+                    sb.setLength(len - 4);
                     answer++;
                 }
             }
