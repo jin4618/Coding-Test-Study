@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int solution(int[] mats, String[][] park) {
-        // 내림차순으로 돗자리 크기 정렬
+        // 돗자리 크기 정렬
         Arrays.sort(mats);
         
         // 가장 큰 돗자리부터
