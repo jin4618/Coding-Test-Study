@@ -1,8 +1,8 @@
 class Solution {
     public int[] solution(int n) {
         int[][] triangle = new int[n][n];
-        int value = 1;
-        int row = 0, col = 0;
+        int value = 1;  // 채울 값
+        int row = 0, col = 0;   // 시작 위치
         int direction = 0;  // 0: 아래, 1: 오른쪽, 2: 왼쪽 위
         
         // 전체 채워야 할 숫자 개수
