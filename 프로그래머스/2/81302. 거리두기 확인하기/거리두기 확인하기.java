@@ -2,6 +2,7 @@ class Solution {
     // 상하좌우 이동을 위한 방향 배열
     private final int[] dx = {-1, 1, 0, 0};  // 상하
     private final int[] dy = {0, 0, -1, 1};  // 좌우
+    private final int[][] diagonals = {{-1, -1}, {-1, 1}, {1, -1}, {1, 1}}; // 대각선
     
     public int[] solution(String[][] places) {
         int[] answer = new int[places.length];
@@ -60,7 +61,6 @@ class Solution {
         }
 
         // 대각선 위치 확인
-        int[][] diagonals = {{-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
         for (int[] d : diagonals) {
             int nx = x + d[0];
             int ny = y + d[1];
