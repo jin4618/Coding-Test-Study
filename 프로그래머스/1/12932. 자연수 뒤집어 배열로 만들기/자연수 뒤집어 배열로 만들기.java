@@ -1,13 +1,16 @@
-import java.util.Arrays;
 class Solution {
     public int[] solution(long n) {
-        String is = String.valueOf(n);
-        int[] answer = new int[is.length()];
+        String str = Long.toString(n);
         
-        for(int i = 0; i < is.length(); i++) {
-            answer[i] = Integer.parseInt(is.substring(is.length()-1-i, is.length()-i));
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+        
+        char[] chars = sb.toString().toCharArray();
+        
+        int[] answer = new int[chars.length];
+        for(int i = 0; i < chars.length; i++) {
+            answer[i] = chars[i] - '0';
         }
-        
         return answer;
     }
 }
