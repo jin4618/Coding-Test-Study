@@ -1,25 +1,22 @@
-class Solution {
+public class Solution {
     public String solution(String s) {
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
+        boolean isSpace = true; // 공백을 기준으로 다음 문자는 대문자
         
-        String[] sArr = s.split(" ", -1);
-        
-        for(int i = 0; i < sArr.length; i++) {
-            String[] word = sArr[i].split("");
-            
-            for(int j = 0; j < word.length; j++) {
-                if(j % 2 == 0) {
-                    word[j] = word[j].toUpperCase();
+        for (char c : s.toCharArray()) {
+            if (!Character.isAlphabetic(c)) {
+                answer.append(c); // 공백은 그대로 추가
+                isSpace = true; // 공백이면 다음은 대문자
+            } else {
+                if (isSpace) {
+                    answer.append(Character.toUpperCase(c)); // 대문자로 변환
+                } else {
+                    answer.append(Character.toLowerCase(c)); // 소문자로 변환
                 }
-                else {
-                    word[j] = word[j].toLowerCase();
-                }
+                isSpace = !isSpace;
             }
-            sArr[i] = String.join("", word);
         }
-        
-        answer = String.join(" ", sArr);
-        
-        return answer;
+
+        return answer.toString();
     }
 }
