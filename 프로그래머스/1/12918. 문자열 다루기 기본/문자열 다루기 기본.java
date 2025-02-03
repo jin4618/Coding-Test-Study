@@ -2,15 +2,12 @@ class Solution {
     public boolean solution(String s) {
         int len = s.length();
         
-        if(len == 4 || len == 6) {
-            for(int i = 0; i < len; i++) {
-                if(!Character.isDigit(s.charAt(i))) {
-                    return false;
-                }
-            }
-            return true;
+        if(len != 4 && len != 6) return false;
+        
+        for(char c : s.toCharArray()) {
+            if(!Character.isDigit(c)) return false;
         }
         
-        return false;
+        return true;
     }
 }
