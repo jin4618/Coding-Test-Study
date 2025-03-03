@@ -1,6 +1,6 @@
 class Solution {
     public int[] solution(int brown, int yellow) {
-        for (int yellowHeight = 1; yellowHeight <= Math.sqrt(yellow); yellowHeight++) {
+        for (int yellowHeight = 1; yellowHeight <= yellow; yellowHeight++) {
             if (yellow % yellowHeight != 0) continue;
             
             int yellowWidth = yellow / yellowHeight;
@@ -10,9 +10,9 @@ class Solution {
             int totalWidth = yellowWidth + 2;
             
             // 갈색 격자 수 계산 및 확인
-            int calculatedBrown = totalHeight * totalWidth - yellow;
+            int checkBrown = totalHeight * totalWidth - yellow;
             
-            if (calculatedBrown == brown && totalWidth >= totalHeight) {
+            if (checkBrown == brown && totalWidth >= totalHeight) {
                 return new int[] {totalWidth, totalHeight};
             }
         }
